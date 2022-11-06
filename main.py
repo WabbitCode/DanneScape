@@ -30,7 +30,8 @@ class Button:
 
         return action
 
-print("Hej")
+print("Hej Isak!")
+
 # Title screen instances
 start_button = Button(1455, 790, start_button_img)
 title_background = start_img
