@@ -3,6 +3,7 @@ from buffs import *
 from items import *
 from random import randint
 from math import floor
+from screen import *
 
 
 class Player(pygame.sprite.Sprite):
@@ -90,7 +91,6 @@ class Player(pygame.sprite.Sprite):
             self.is_animating = False
 
     def basic_health(self):
-        from main import screen
         pygame.draw.rect(screen, (255, 0, 0), (self.hp_x, self.hp_y, self.health_bar_length, 20))
         pygame.draw.rect(screen, (0, 255, 0), (self.hp_x, self.hp_y, self.current_health / self.health_ratio, 20))
 

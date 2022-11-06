@@ -1,17 +1,11 @@
-import pygame
 import sys
-from player import Player
-from settings import *
+from screen import *
 from game_states import *
 from loaded_images import *
+from player import Player
 
-pygame.init()
-clock = pygame.time.Clock()
 
 # Define the screen surface and set the caption
-screen = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption("DanneScape")
-
 
 class Button:
     def __init__(self, x, y, image):
@@ -148,4 +142,4 @@ game_state = GameState()
 # Game loop
 while True:
     game_state.state_manager()
-    clock.tick(FPS)
+    clock.tick(60)
